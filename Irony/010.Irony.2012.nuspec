@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Irony.QDARC</id>
+    <version>1.0.4</version>
+    <authors>Alexey Yakovlev, Roman Ivantsov, Rafał Furman</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <description>Fork of https://github.com/IronyProject/Irony that makes this project portable.</description>
+    <releaseNotes>
+    </releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+  </files>
+</package>

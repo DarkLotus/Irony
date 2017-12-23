@@ -21,11 +21,11 @@ namespace Refal
 
 			// Terminals
 			var Number = new NumberLiteral("Number");
-			Number.DefaultIntTypes = new TypeCode[] { TypeCode.Int32, TypeCode.Int64, NumberLiteral.TypeCodeBigInt };
+			Number.DefaultIntTypes = new Irony.TypeCode[] { Irony.TypeCode.Int32, Irony.TypeCode.Int64, NumberLiteral.TypeCodeBigInt };
 			Number.AddPrefix("0x", NumberOptions.Hex);
-			Number.AddSuffix("u", TypeCode.UInt32);
-			Number.AddSuffix("l", TypeCode.Int64);
-			Number.AddSuffix("ul", TypeCode.UInt64);
+			Number.AddSuffix("u", Irony.TypeCode.UInt32);
+			Number.AddSuffix("l", Irony.TypeCode.Int64);
+			Number.AddSuffix("ul", Irony.TypeCode.UInt64);
 			Number.Options |= NumberOptions.IntOnly;
 
 			var CharLiteral = new StringLiteral("Char", "'", StringOptions.AllowsAllEscapes);

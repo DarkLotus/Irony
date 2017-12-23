@@ -382,7 +382,7 @@ namespace Irony.Parsing {
       if (details.Value == null) return false;
       try {
         if (typeCode != TypeCode.UInt64)
-          details.Value = Convert.ChangeType(details.Value, typeCode, CultureInfo.InvariantCulture);
+          details.Value = Convert.ToInt64(details.Value, CultureInfo.InvariantCulture);
         return true;
       } catch (Exception) {
         details.Error = string.Format(Resources.ErrCannotConvertValueToType, details.Value, typeCode.ToString());

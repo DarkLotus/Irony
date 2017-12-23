@@ -38,7 +38,6 @@ namespace Irony.Tests {
 
     [TestMethod]
     public void TestErrorRecovery() {
-
       var grammar = new ErrorRecoveryGrammar();
       var parser = new Parser(grammar);
       TestHelper.CheckGrammarErrors(parser);

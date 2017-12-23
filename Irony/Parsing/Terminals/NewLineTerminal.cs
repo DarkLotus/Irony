@@ -24,7 +24,7 @@ namespace Irony.Parsing {
       this.Flags |= TermFlags.IsPunctuation;
     }
 
-    public string LineTerminators = "\n\r\v";
+    public char[] LineTerminators = "\n\r\v".ToCharArray();
 
     #region overrides: Init, GetFirsts, TryMatch
     public override void Init(GrammarData grammarData) {

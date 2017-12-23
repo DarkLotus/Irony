@@ -83,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Irony.Interpreter\015.Irony.Interpreter.2012.csproj">
-      <Project>{321A7F5D-00C2-4095-9970-075CDEE8C139}</Project>
+      <Project>{321a7f5d-00c2-4095-9970-075cdee8c139}</Project>
       <Name>015.Irony.Interpreter.2012</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Irony\010.Irony.2012.csproj">

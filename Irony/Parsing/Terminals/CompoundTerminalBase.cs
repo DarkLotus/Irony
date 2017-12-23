@@ -14,31 +14,32 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Irony.Parsing {
-  #region About compound terminals
-  /*
-   As  it turns out, many terminal types in real-world languages have 3-part structure: prefix-body-suffix
-   The body is essentially the terminal "value", while prefix and suffix are used to specify additional 
-   information (options), while not  being a part of the terminal itself. 
-   For example:
-   1. c# numbers, may have 0x prefix for hex representation, and suffixes specifying 
-     the exact data type of the literal (f, l, m, etc)
-   2. c# string may have "@" prefix which disables escaping inside the string
-   3. c# identifiers may have "@" prefix and escape sequences inside - just like strings
-   4. Python string may have "u" and "r" prefixes, "r" working the same way as @ in c# strings
-   5. VB string literals may have "c" suffix identifying that the literal is a character, not a string
-   6. VB number literals and identifiers may have suffixes identifying data type
-   
-   So it seems like all these terminals have the format "prefix-body-suffix". 
-   The CompoundTerminalBase base class implements base functionality supporting this multi-part structure.
-   The IdentifierTerminal, NumberLiteral and StringLiteral classes inherit from this base class. 
-   The methods in TerminalFactory static class demonstrate that with this architecture we can define the whole 
-   variety of terminals for c#, Python and VB.NET languages. 
-*/
-  #endregion
+namespace Irony.Parsing
+{
+    #region About compound terminals
+    /*
+     As  it turns out, many terminal types in real-world languages have 3-part structure: prefix-body-suffix
+     The body is essentially the terminal "value", while prefix and suffix are used to specify additional 
+     information (options), while not  being a part of the terminal itself. 
+     For example:
+     1. c# numbers, may have 0x prefix for hex representation, and suffixes specifying 
+       the exact data type of the literal (f, l, m, etc)
+     2. c# string may have "@" prefix which disables escaping inside the string
+     3. c# identifiers may have "@" prefix and escape sequences inside - just like strings
+     4. Python string may have "u" and "r" prefixes, "r" working the same way as @ in c# strings
+     5. VB string literals may have "c" suffix identifying that the literal is a character, not a string
+     6. VB number literals and identifiers may have suffixes identifying data type
+
+     So it seems like all these terminals have the format "prefix-body-suffix". 
+     The CompoundTerminalBase base class implements base functionality supporting this multi-part structure.
+     The IdentifierTerminal, NumberLiteral and StringLiteral classes inherit from this base class. 
+     The methods in TerminalFactory static class demonstrate that with this architecture we can define the whole 
+     variety of terminals for c#, Python and VB.NET languages. 
+  */
+    #endregion
 
 
-  public class EscapeTable : Dictionary<char, char> { }
+    public class EscapeTable : Dictionary<char, char> { }
 
   public abstract class CompoundTerminalBase : Terminal {
 
@@ -188,7 +189,7 @@ namespace Irony.Parsing {
     protected virtual void ReadPrefix(ISourceStream source, CompoundTokenDetails details) {
       if (!_prefixesFirsts.Contains(source.PreviewChar))
         return;
-      var comparisonType = CaseSensitivePrefixesSuffixes ? StringComparison.InvariantCulture : StringComparison.InvariantCultureIgnoreCase;
+      var comparisonType = CaseSensitivePrefixesSuffixes ? StringComparison.Ordinal : StringComparison.OrdinalIgnoreCase;
       foreach (string pfx in Prefixes) {
         // Prefixes are usually case insensitive, even if language is case-sensitive. So we cannot use source.MatchSymbol here,
         // we need case-specific comparison
@@ -211,7 +212,7 @@ namespace Irony.Parsing {
 
     protected virtual void ReadSuffix(ISourceStream source, CompoundTokenDetails details) {
       if (!_suffixesFirsts.Contains(source.PreviewChar)) return;
-      var comparisonType = CaseSensitivePrefixesSuffixes ? StringComparison.InvariantCulture : StringComparison.InvariantCultureIgnoreCase;
+      var comparisonType = CaseSensitivePrefixesSuffixes ? StringComparison.Ordinal : StringComparison.OrdinalIgnoreCase;
       foreach (string sfx in Suffixes) {
         //Suffixes are usually case insensitive, even if language is case-sensitive. So we cannot use source.MatchSymbol here,
         // we need case-specific comparison

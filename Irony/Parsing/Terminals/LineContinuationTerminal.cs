@@ -26,7 +26,7 @@ namespace Irony.Parsing {
       base.Init(grammarData);
 
       // initialize string of start characters for fast lookup
-      _startSymbolsFirsts = new String(StartSymbols.Select(s => s.First()).ToArray());
+      _startSymbolsFirsts = new String(StartSymbols.Select(s => s[0]).ToArray());
 
       if (this.EditorInfo == null) {
         this.EditorInfo = new TokenEditorInfo(TokenType.Delimiter, TokenColor.Comment, TokenTriggers.None);
