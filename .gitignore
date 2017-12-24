@@ -192,3 +192,4 @@ $RECYCLE.BIN/
 /SolvesIT/Scripts/Local/*/*/*.js
 /node_modules
 /Qdarc.Sql.Parsers.Tsql/New-NuGetPackages
+.vs/

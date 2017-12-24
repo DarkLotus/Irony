@@ -1,12 +1,36 @@
 {
-  "locked": false,
-  "version": 2,
+  "version": 3,
   "targets": {
-    ".NETPortable,Version=v4.5,Profile=Profile111": {}
+    ".NETPortable,Version=v4.5,Profile=Profile7": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
     "": [],
-    ".NETPortable,Version=v4.5,Profile=Profile111": []
+    ".NETPortable,Version=v4.5,Profile=Profile7": []
+  },
+  "packageFolders": {
+    "C:\\Users\\rafal_000\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "C:\\Repos\\Irony\\Irony2\\Irony\\010.Irony.2012.csproj",
+      "projectName": "010.Irony.2012",
+      "projectPath": "C:\\Repos\\Irony\\Irony2\\Irony\\010.Irony.2012.csproj",
+      "projectJsonPath": "C:\\Repos\\Irony\\Irony2\\Irony\\project.json",
+      "packagesPath": "C:\\Users\\rafal_000\\.nuget\\packages\\",
+      "outputPath": "C:\\Repos\\Irony\\Irony2\\Irony\\obj\\",
+      "projectStyle": "ProjectJson",
+      "configFilePaths": [
+        "C:\\Users\\rafal_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      }
+    },
+    "frameworks": {
+      "portable45-net45+win8": {}
+    }
   }
 }

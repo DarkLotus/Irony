@@ -100,9 +100,6 @@ namespace Irony.Parsing {
       this.Parser = parser;
       Language = Parser.Language;
       Culture = Language.Grammar.DefaultCulture;
-      //This might be a problem for multi-threading - if we have several contexts on parallel threads with different culture.
-      //Resources.Culture is static property (this is not Irony's fault, this is auto-generated file).
-      Resources.Culture = Culture; 
       SharedParsingEventArgs = new ParsingEventArgs(this);
       SharedValidateTokenEventArgs = new ValidateTokenEventArgs(this); 
     }

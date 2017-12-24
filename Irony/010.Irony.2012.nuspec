@@ -13,5 +13,6 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="bin\Release\portable-net45+win8+wpa81\Irony.dll" target="lib\portable-net45+win8+wpa81" />
   </files>
 </package>
