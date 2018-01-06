@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Irony.QDARC</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <authors>Alexey Yakovlev, Roman Ivantsov, Rafał Furman</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -13,6 +13,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\portable-net45+win8+wpa81\Irony.dll" target="lib\portable-net45+win8+wpa81" />
+    <file src="bin\Release\netstandard2.0\Irony.dll" target="lib\netstandard2.0" />
   </files>
 </package>
